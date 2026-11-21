@@ -62,7 +62,7 @@ Each family declares `never`, `opt-in` or `default`. Scriptorium is `never` (the
 
 ## Versioning
 
-The engine is versioned in `engine/VERSION` and tagged `engine-vX.Y.Z`. Client repos pin a tag and update with `node tools/update-engine.mjs <tag>`.
+The engine is versioned in `engine/VERSION` (semver). Client repos record the exact commit they copied in `engine.lock.json` and update with `node tools/update-engine.mjs <ref>`.
 
 ## License
 
