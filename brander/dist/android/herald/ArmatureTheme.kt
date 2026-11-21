@@ -1,4 +1,4 @@
-// Brander :: herald (Scriptorium family). Built with Armature engine 1.1.0. Generated, do not edit.
+// Brander :: herald (Scriptorium family). Built with Armature engine 1.2.0. Generated, do not edit.
 package digital.brander.theme.herald
 
 import android.os.Build
@@ -12,6 +12,8 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -184,6 +186,40 @@ object ArmatureTypeScale {
     val display = 44.sp
     val displayLg = 55.sp
 }
+
+/**
+ * Material 3 typography from the type scale. Pass the app's bundled font families.
+ * Display and headline styles use the display face only from the title size up.
+ */
+fun armatureTypography(
+    display: FontFamily,
+    ui: FontFamily,
+): Typography {
+    val s = ArmatureTypeScale
+    fun style(f: FontFamily, size: androidx.compose.ui.unit.TextUnit, lh: Float, w: FontWeight = FontWeight.Normal) =
+        TextStyle(fontFamily = f, fontWeight = w, fontSize = size, lineHeight = size * lh)
+    return Typography(
+        displayLarge = style(display, s.displayLg, 1.2f, FontWeight.SemiBold),
+        displayMedium = style(display, s.display, 1.2f, FontWeight.SemiBold),
+        displaySmall = style(display, s.headline, 1.2f, FontWeight.Medium),
+        headlineLarge = style(display, s.headline, 1.2f, FontWeight.Medium),
+        headlineMedium = style(display, s.title, 1.2f, FontWeight.Medium),
+        headlineSmall = style(ui, s.titleSm, 1.35f, FontWeight.Bold),
+        titleLarge = style(ui, s.titleSm, 1.35f, FontWeight.Bold),
+        titleMedium = style(ui, s.bodyLg, 1.35f, FontWeight.SemiBold),
+        titleSmall = style(ui, s.label, 1.35f, FontWeight.SemiBold),
+        bodyLarge = style(ui, s.bodyLg, 1.55f),
+        bodyMedium = style(ui, s.body, 1.55f),
+        bodySmall = style(ui, s.label, 1.55f),
+        labelLarge = style(ui, s.label, 1.35f, FontWeight.SemiBold),
+        labelMedium = style(ui, s.caption, 1.35f, FontWeight.SemiBold),
+        labelSmall = style(ui, s.caption, 1.35f),
+    )
+}
+
+/** Long-form reading style (notes, articles, transcripts). */
+fun armatureReadingStyle(reading: FontFamily) =
+    TextStyle(fontFamily = reading, fontSize = ArmatureTypeScale.bodyLg, lineHeight = ArmatureTypeScale.bodyLg * 1.7f)
 
 val ArmatureShapes = Shapes(
     extraSmall = RoundedCornerShape(ArmatureDimens.radiusComponent),

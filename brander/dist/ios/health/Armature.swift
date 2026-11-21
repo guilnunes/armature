@@ -1,4 +1,4 @@
-// Brander :: health (Health family). Built with Armature engine 1.1.0. Generated, do not edit.
+// Brander :: health (Health family). Built with Armature engine 1.2.0. Generated, do not edit.
 import SwiftUI
 
 extension Color {

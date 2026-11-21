@@ -231,6 +231,8 @@ ${sig["tick-rule"] ? `/* ${owner.name} signature: tick rule */
 
 const kHex = (h) => `Color(0xFF${h.slice(1)})`;
 function compose(t) {
+  const lh = t.foundation["line-height"];
+  const lhTight = lh.tight.$value, lhSnug = lh.snug.$value, lhBody = lh.body.$value, lhReading = lh.reading.$value;
   const pkg = `${PKG}.theme.${t.id.replace(/[^a-z0-9]/gi, "")}`;
   const scheme = (m) => Object.entries(contract.roles).filter(([, d]) => d.material)
     .map(([r, d]) => `    ${d.material} = ${kHex(t.modes[m][r])},`)
@@ -252,6 +254,8 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -288,6 +292,40 @@ ${Object.entries(sp).filter(([k]) => !k.startsWith("$")).map(([k, v]) => `    va
 object ArmatureTypeScale {
 ${Object.entries(fs_).filter(([k]) => !k.startsWith("$")).map(([k, v]) => `    val ${camel(k)} = ${px(v.$value)}.sp`).join("\n")}
 }
+
+/**
+ * Material 3 typography from the type scale. Pass the app's bundled font families.
+ * Display and headline styles use the display face only from the title size up.
+ */
+fun armatureTypography(
+    display: FontFamily,
+    ui: FontFamily,
+): Typography {
+    val s = ArmatureTypeScale
+    fun style(f: FontFamily, size: androidx.compose.ui.unit.TextUnit, lh: Float, w: FontWeight = FontWeight.Normal) =
+        TextStyle(fontFamily = f, fontWeight = w, fontSize = size, lineHeight = size * lh)
+    return Typography(
+        displayLarge = style(display, s.displayLg, ${lhTight}f, FontWeight.SemiBold),
+        displayMedium = style(display, s.display, ${lhTight}f, FontWeight.SemiBold),
+        displaySmall = style(display, s.headline, ${lhTight}f, FontWeight.Medium),
+        headlineLarge = style(display, s.headline, ${lhTight}f, FontWeight.Medium),
+        headlineMedium = style(display, s.title, ${lhTight}f, FontWeight.Medium),
+        headlineSmall = style(ui, s.titleSm, ${lhSnug}f, FontWeight.Bold),
+        titleLarge = style(ui, s.titleSm, ${lhSnug}f, FontWeight.Bold),
+        titleMedium = style(ui, s.bodyLg, ${lhSnug}f, FontWeight.SemiBold),
+        titleSmall = style(ui, s.label, ${lhSnug}f, FontWeight.SemiBold),
+        bodyLarge = style(ui, s.bodyLg, ${lhBody}f),
+        bodyMedium = style(ui, s.body, ${lhBody}f),
+        bodySmall = style(ui, s.label, ${lhBody}f),
+        labelLarge = style(ui, s.label, ${lhSnug}f, FontWeight.SemiBold),
+        labelMedium = style(ui, s.caption, ${lhSnug}f, FontWeight.SemiBold),
+        labelSmall = style(ui, s.caption, ${lhSnug}f),
+    )
+}
+
+/** Long-form reading style (notes, articles, transcripts). */
+fun armatureReadingStyle(reading: FontFamily) =
+    TextStyle(fontFamily = reading, fontSize = ArmatureTypeScale.bodyLg, lineHeight = ArmatureTypeScale.bodyLg * ${lhReading}f)
 
 val ArmatureShapes = Shapes(
     extraSmall = RoundedCornerShape(ArmatureDimens.radiusComponent),
