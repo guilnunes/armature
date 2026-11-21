@@ -1,0 +1,19 @@
+{
+  "$description": "Vert. The scribe's desk: notes, bookmarks and their links.",
+  "app": {
+    "name": "Notekeeper",
+    "family": "scriptorium",
+    "tincture": "vert",
+    "icon-motif": "Quill and marginal note"
+  },
+  "theme": {
+    "light": {
+      "primary": "{palette.vert.700}",
+      "ring": "{palette.vert.700}"
+    },
+    "dark": {
+      "primary": "{palette.vert.300}",
+      "ring": "{palette.vert.300}"
+    }
+  }
+}

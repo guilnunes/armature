@@ -1,0 +1,19 @@
+{
+  "$description": "Purpure. The tile that takes its place in the mosaic: classification.",
+  "app": {
+    "name": "Tessera",
+    "family": "scriptorium",
+    "tincture": "purpure",
+    "icon-motif": "Single mosaic tile in a grid"
+  },
+  "theme": {
+    "light": {
+      "primary": "{palette.purpure.700}",
+      "ring": "{palette.purpure.700}"
+    },
+    "dark": {
+      "primary": "{palette.purpure.300}",
+      "ring": "{palette.purpure.300}"
+    }
+  }
+}

@@ -1,0 +1,112 @@
+/* Brander :: herald (Scriptorium family). Built with Armature engine 1.0.0. Generated, do not edit. */
+/* Usage: @import "tailwindcss"; @import "./herald.css";  Works with shadcn/ui as is. */
+
+:root {
+  --background: #F4EDDF;
+  --foreground: #1C1712;
+  --card: #FBF7EE;
+  --card-foreground: #1C1712;
+  --popover: #FBF7EE;
+  --popover-foreground: #1C1712;
+  --primary: #1E467F;
+  --primary-foreground: #FBF7EE;
+  --secondary: #E9DEC8;
+  --secondary-foreground: #2A231B;
+  --muted: #E9DEC8;
+  --muted-foreground: #574C3F;
+  --accent: #F5E9C4;
+  --accent-foreground: #1C1712;
+  --destructive: #8E2318;
+  --destructive-foreground: #FBF7EE;
+  --border: #D6C7A8;
+  --input: #6E6252;
+  --ring: #1E467F;
+  --highlight: #8F6F1C;
+  --radius: 2px;
+  --radius-container: 4px;
+  --focus-width: 3px;
+  --focus-offset: 2px;
+  --family-display: "Grenze Gotisch", Georgia, serif;
+  --family-ui: "Atkinson Hyperlegible Next", system-ui, sans-serif;
+  --family-reading: "Literata", Georgia, serif;
+  --family-mono: "Atkinson Hyperlegible Mono", ui-monospace, monospace;
+  --ease-enter: cubic-bezier(0.2, 0, 0, 1);
+  --ease-exit: cubic-bezier(0.3, 0, 1, 1);
+}
+
+.dark {
+  --background: #1A1612;
+  --foreground: #F4EDDF;
+  --card: #241F19;
+  --card-foreground: #F4EDDF;
+  --popover: #322B23;
+  --popover-foreground: #F4EDDF;
+  --primary: #9DBCEA;
+  --primary-foreground: #12100C;
+  --secondary: #322B23;
+  --secondary-foreground: #F4EDDF;
+  --muted: #241F19;
+  --muted-foreground: #B9A784;
+  --accent: #3A3020;
+  --accent-foreground: #E3C46E;
+  --destructive: #EC9A88;
+  --destructive-foreground: #12100C;
+  --border: #4A4035;
+  --input: #B9A784;
+  --ring: #9DBCEA;
+  --highlight: #E3C46E;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-highlight: var(--highlight);
+  --radius-sm: calc(var(--radius) * 0.5);
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius-container);
+  --font-sans: var(--family-ui);
+  --font-serif: var(--family-reading);
+  --font-display: var(--family-display);
+  --font-mono: var(--family-mono);
+  --text-caption: 14px;
+  --text-label: 16px;
+  --text-body: 18px;
+  --text-body-lg: 20px;
+  --text-title-sm: 22px;
+  --text-title: 28px;
+  --text-headline: 35px;
+  --text-display: 44px;
+  --text-display-lg: 55px;
+  --spacing: 4px;
+  --ease-enter: var(--ease-enter);
+}
+
+/* Engine defaults */
+html { font-size: 100%; }
+body { font-family: var(--family-ui); font-size: 18px; line-height: 1.55; background: var(--background); color: var(--foreground); }
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: var(--focus-width) solid var(--ring);
+  outline-offset: var(--focus-offset);
+}
+:where(button, [role="button"], input, select) { min-height: 48px; }
+/* Brander signature: tick rule */
+.tick-rule { height: 1px; background: var(--border); position: relative; }
+.tick-rule::after { content: ""; position: absolute; right: 0; top: -3px; width: 7px; height: 7px; background: var(--highlight); transform: rotate(45deg); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: 0ms !important; animation-duration: 0ms !important; } }

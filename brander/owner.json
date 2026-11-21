@@ -1,0 +1,25 @@
+{
+  "$description": "Brander: the owner layer for Guilherme's own products. Signatures here are Brander's maker's marks and must never be copied into client systems.",
+  "name": "Brander",
+  "package": "digital.brander",
+  "signatures": {
+    "focus": {
+      "width": "3px",
+      "offset": "2px",
+      "$description": "Same ring geometry in every Brander family"
+    },
+    "easing": {
+      "name": "settle",
+      "value": [
+        0.2,
+        0,
+        0,
+        1
+      ],
+      "$description": "Every enter and move transition"
+    },
+    "tick-rule": true,
+    "ui-font-default": "Atkinson Hyperlegible Next"
+  },
+  "foundation": {}
+}

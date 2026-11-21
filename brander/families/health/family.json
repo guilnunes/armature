@@ -1,0 +1,48 @@
+{
+  "$description": "Health family (working name). Placeholder values so the pipeline builds; the real palette comes from the Healthtech design system work. Calm clinical teal, rounded corners, opt-in dynamic color.",
+  "settings": {
+    "name": "Health",
+    "dynamic-color": "opt-in",
+    "dynamic-color-reason": "Clinical apps benefit from feeling native; users may switch to wallpaper colors in settings, but status colors (vitals, alerts) are never replaced.",
+    "radius-component": "lg",
+    "radius-container": "xl",
+    "fonts": {
+      "display": { "family": "Atkinson Hyperlegible Next", "fallback": "system-ui, sans-serif", "license": "OFL" },
+      "ui": { "family": "Atkinson Hyperlegible Next", "fallback": "system-ui, sans-serif", "license": "OFL" },
+      "reading": { "family": "Atkinson Hyperlegible Next", "fallback": "system-ui, sans-serif", "license": "OFL" },
+      "mono": { "family": "Atkinson Hyperlegible Mono", "fallback": "ui-monospace, monospace", "license": "OFL" }
+    }
+  },
+  "palette": {
+    "$type": "color",
+    "slate": { "50": { "$value": "#F7FAFB" }, "100": { "$value": "#EEF3F5" }, "200": { "$value": "#DDE6EA" }, "500": { "$value": "#5C6E77" }, "600": { "$value": "#46565E" }, "800": { "$value": "#1F2A30" }, "900": { "$value": "#121A1E" }, "950": { "$value": "#0B1114" } },
+    "teal": { "100": { "$value": "#D3F0EE" }, "300": { "$value": "#7FD3CC" }, "700": { "$value": "#0F6460" } },
+    "coral": { "300": { "$value": "#F4A394" }, "700": { "$value": "#A1301E" } }
+  },
+  "theme": {
+    "light": {
+      "background": "{palette.slate.50}", "foreground": "{palette.slate.900}",
+      "card": "#FFFFFF", "card-foreground": "{palette.slate.900}",
+      "popover": "#FFFFFF", "popover-foreground": "{palette.slate.900}",
+      "primary": "{palette.teal.700}", "primary-foreground": "#FFFFFF",
+      "secondary": "{palette.slate.100}", "secondary-foreground": "{palette.slate.800}",
+      "muted": "{palette.slate.100}", "muted-foreground": "{palette.slate.600}",
+      "accent": "{palette.teal.100}", "accent-foreground": "{palette.slate.900}",
+      "destructive": "{palette.coral.700}", "destructive-foreground": "#FFFFFF",
+      "border": "{palette.slate.200}", "input": "{palette.slate.500}",
+      "ring": "{palette.teal.700}", "highlight": "{palette.teal.700}"
+    },
+    "dark": {
+      "background": "{palette.slate.950}", "foreground": "{palette.slate.100}",
+      "card": "{palette.slate.900}", "card-foreground": "{palette.slate.100}",
+      "popover": "{palette.slate.800}", "popover-foreground": "{palette.slate.100}",
+      "primary": "{palette.teal.300}", "primary-foreground": "{palette.slate.950}",
+      "secondary": "{palette.slate.800}", "secondary-foreground": "{palette.slate.100}",
+      "muted": "{palette.slate.900}", "muted-foreground": "{palette.slate.200}",
+      "accent": "{palette.slate.800}", "accent-foreground": "{palette.teal.300}",
+      "destructive": "{palette.coral.300}", "destructive-foreground": "{palette.slate.950}",
+      "border": "{palette.slate.800}", "input": "{palette.slate.500}",
+      "ring": "{palette.teal.300}", "highlight": "{palette.teal.300}"
+    }
+  }
+}

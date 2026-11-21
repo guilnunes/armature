@@ -1,0 +1,19 @@
+{
+  "$description": "Azure. The herald reads proclamations aloud.",
+  "app": {
+    "name": "Herald",
+    "family": "scriptorium",
+    "tincture": "azure",
+    "icon-motif": "Heraldic trumpet with banner"
+  },
+  "theme": {
+    "light": {
+      "primary": "{palette.azure.700}",
+      "ring": "{palette.azure.700}"
+    },
+    "dark": {
+      "primary": "{palette.azure.300}",
+      "ring": "{palette.azure.300}"
+    }
+  }
+}

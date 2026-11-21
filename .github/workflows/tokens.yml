@@ -1,0 +1,14 @@
+name: tokens
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build Brander (fails on any contrast failure)
+        run: node engine/build.mjs brander
+      - name: Generated files are committed
+        run: git diff --exit-code -- brander/dist brander/docs || (echo "::error::brander/dist is stale. Run node engine/build.mjs brander and commit." && exit 1)
