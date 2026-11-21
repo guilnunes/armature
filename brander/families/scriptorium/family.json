@@ -2,90 +2,202 @@
   "$description": "Scriptorium: the information science and knowledge organization family (Notekeeper, Herald, Tessera and future apps). Modern medieval: vellum and iron gall ink, heraldic tinctures as app colors, crisp paper-cut corners, generous reading type.",
   "settings": {
     "name": "Scriptorium",
+    "industry": [
+      "information-science"
+    ],
     "dynamic-color": "never",
     "dynamic-color-reason": "The palette is the identity. Android wallpaper colors would erase the vellum and tincture system. Dark theme, font scale, contrast level and reduced motion from the OS are still always honored.",
     "radius-component": "xs",
     "radius-container": "sm",
     "fonts": {
-      "display": { "family": "Grenze Gotisch", "fallback": "Georgia, serif", "min-size": "title", "license": "OFL", "note": "Readable blackletter. Display only, never below the title size, never for running text or labels." },
-      "ui": { "family": "Atkinson Hyperlegible Next", "fallback": "system-ui, sans-serif", "license": "OFL", "note": "Root default UI face, designed by the Braille Institute for low vision readers." },
-      "reading": { "family": "Literata", "fallback": "Georgia, serif", "license": "OFL", "note": "Long form reading: notes, articles, Herald transcripts." },
-      "mono": { "family": "Atkinson Hyperlegible Mono", "fallback": "ui-monospace, monospace", "license": "OFL", "note": "Call numbers, identifiers, classification codes." }
+      "display": {
+        "family": "Grenze Gotisch",
+        "fallback": "Georgia, serif",
+        "min-size": "title",
+        "license": "OFL",
+        "note": "Readable blackletter. Display only, never below the title size, never for running text or labels."
+      },
+      "ui": {
+        "family": "Atkinson Hyperlegible Next",
+        "fallback": "system-ui, sans-serif",
+        "license": "OFL",
+        "note": "Root default UI face, designed by the Braille Institute for low vision readers."
+      },
+      "reading": {
+        "family": "Literata",
+        "fallback": "Georgia, serif",
+        "license": "OFL",
+        "note": "Long form reading: notes, articles, Herald transcripts."
+      },
+      "mono": {
+        "family": "Atkinson Hyperlegible Mono",
+        "fallback": "ui-monospace, monospace",
+        "license": "OFL",
+        "note": "Call numbers, identifiers, classification codes."
+      }
     }
   },
   "palette": {
     "$type": "color",
     "vellum": {
-      "50":  { "$value": "#FBF7EE" },
-      "100": { "$value": "#F4EDDF" },
-      "200": { "$value": "#E9DEC8" },
-      "300": { "$value": "#D6C7A8" },
-      "400": { "$value": "#B9A784" }
+      "50": {
+        "$value": "#FBF7EE"
+      },
+      "100": {
+        "$value": "#F4EDDF"
+      },
+      "200": {
+        "$value": "#E9DEC8"
+      },
+      "300": {
+        "$value": "#D6C7A8"
+      },
+      "400": {
+        "$value": "#B9A784"
+      }
     },
     "ink": {
-      "500": { "$value": "#6E6252" },
-      "600": { "$value": "#574C3F" },
-      "700": { "$value": "#3D342A" },
-      "800": { "$value": "#2A231B" },
-      "900": { "$value": "#1C1712" }
+      "500": {
+        "$value": "#6E6252"
+      },
+      "600": {
+        "$value": "#574C3F"
+      },
+      "700": {
+        "$value": "#3D342A"
+      },
+      "800": {
+        "$value": "#2A231B"
+      },
+      "900": {
+        "$value": "#1C1712"
+      }
     },
     "night": {
-      "600": { "$value": "#4A4035" },
-      "700": { "$value": "#322B23" },
-      "800": { "$value": "#241F19" },
-      "900": { "$value": "#1A1612" },
-      "950": { "$value": "#12100C" }
+      "600": {
+        "$value": "#4A4035"
+      },
+      "700": {
+        "$value": "#322B23"
+      },
+      "800": {
+        "$value": "#241F19"
+      },
+      "900": {
+        "$value": "#1A1612"
+      },
+      "950": {
+        "$value": "#12100C"
+      }
     },
-    "gules":   { "$description": "Heraldic red. In Scriptorium it is the rubricator's red: errors and destructive actions.", "100": { "$value": "#F6DCD4" }, "300": { "$value": "#EC9A88" }, "700": { "$value": "#8E2318" } },
-    "or":      { "$description": "Heraldic gold. Illumination: selection, highlights, decoration.", "100": { "$value": "#F5E9C4" }, "300": { "$value": "#E3C46E" }, "600": { "$value": "#8F6F1C" }, "800": { "$value": "#3A3020" } },
-    "vert":    { "$description": "Heraldic green. Notekeeper.", "100": { "$value": "#D5EFE4" }, "300": { "$value": "#82CFB2" }, "700": { "$value": "#17604A" } },
-    "azure":   { "$description": "Heraldic blue. Herald.", "100": { "$value": "#DCE6F6" }, "300": { "$value": "#9DBCEA" }, "700": { "$value": "#1E467F" } },
-    "purpure": { "$description": "Heraldic purple, the porphyry of Byzantine mosaics. Tessera.", "100": { "$value": "#EBDDF3" }, "300": { "$value": "#CDA9E0" }, "700": { "$value": "#5A2D72" } }
+    "gules": {
+      "$description": "Heraldic red. In Scriptorium it is the rubricator's red: errors and destructive actions.",
+      "100": {
+        "$value": "#F6DCD4"
+      },
+      "300": {
+        "$value": "#EC9A88"
+      },
+      "700": {
+        "$value": "#8E2318"
+      }
+    },
+    "or": {
+      "$description": "Heraldic gold. Illumination: selection, highlights, decoration.",
+      "100": {
+        "$value": "#F5E9C4"
+      },
+      "300": {
+        "$value": "#E3C46E"
+      },
+      "600": {
+        "$value": "#8F6F1C"
+      },
+      "800": {
+        "$value": "#3A3020"
+      }
+    },
+    "vert": {
+      "$description": "Heraldic green. Notekeeper.",
+      "100": {
+        "$value": "#D5EFE4"
+      },
+      "300": {
+        "$value": "#82CFB2"
+      },
+      "700": {
+        "$value": "#17604A"
+      }
+    },
+    "azure": {
+      "$description": "Heraldic blue. Herald.",
+      "100": {
+        "$value": "#DCE6F6"
+      },
+      "300": {
+        "$value": "#9DBCEA"
+      },
+      "700": {
+        "$value": "#1E467F"
+      }
+    },
+    "purpure": {
+      "$description": "Heraldic purple, the porphyry of Byzantine mosaics. Tessera.",
+      "100": {
+        "$value": "#EBDDF3"
+      },
+      "300": {
+        "$value": "#CDA9E0"
+      },
+      "700": {
+        "$value": "#5A2D72"
+      }
+    }
   },
   "theme": {
     "light": {
-      "background":           "{palette.vellum.100}",
-      "foreground":           "{palette.ink.900}",
-      "card":                 "{palette.vellum.50}",
-      "card-foreground":      "{palette.ink.900}",
-      "popover":              "{palette.vellum.50}",
-      "popover-foreground":   "{palette.ink.900}",
-      "primary":              "{palette.vert.700}",
-      "primary-foreground":   "{palette.vellum.50}",
-      "secondary":            "{palette.vellum.200}",
+      "background": "{palette.vellum.100}",
+      "foreground": "{palette.ink.900}",
+      "card": "{palette.vellum.50}",
+      "card-foreground": "{palette.ink.900}",
+      "popover": "{palette.vellum.50}",
+      "popover-foreground": "{palette.ink.900}",
+      "primary": "{palette.vert.700}",
+      "primary-foreground": "{palette.vellum.50}",
+      "secondary": "{palette.vellum.200}",
       "secondary-foreground": "{palette.ink.800}",
-      "muted":                "{palette.vellum.200}",
-      "muted-foreground":     "{palette.ink.600}",
-      "accent":               "{palette.or.100}",
-      "accent-foreground":    "{palette.ink.900}",
-      "destructive":          "{palette.gules.700}",
+      "muted": "{palette.vellum.200}",
+      "muted-foreground": "{palette.ink.600}",
+      "accent": "{palette.or.100}",
+      "accent-foreground": "{palette.ink.900}",
+      "destructive": "{palette.gules.700}",
       "destructive-foreground": "{palette.vellum.50}",
-      "border":               "{palette.vellum.300}",
-      "input":                "{palette.ink.500}",
-      "ring":                 "{palette.vert.700}",
-      "highlight":            "{palette.or.600}"
+      "border": "{palette.vellum.300}",
+      "input": "{palette.ink.500}",
+      "ring": "{palette.vert.700}",
+      "highlight": "{palette.or.600}"
     },
     "dark": {
-      "background":           "{palette.night.900}",
-      "foreground":           "{palette.vellum.100}",
-      "card":                 "{palette.night.800}",
-      "card-foreground":      "{palette.vellum.100}",
-      "popover":              "{palette.night.700}",
-      "popover-foreground":   "{palette.vellum.100}",
-      "primary":              "{palette.vert.300}",
-      "primary-foreground":   "{palette.night.950}",
-      "secondary":            "{palette.night.700}",
+      "background": "{palette.night.900}",
+      "foreground": "{palette.vellum.100}",
+      "card": "{palette.night.800}",
+      "card-foreground": "{palette.vellum.100}",
+      "popover": "{palette.night.700}",
+      "popover-foreground": "{palette.vellum.100}",
+      "primary": "{palette.vert.300}",
+      "primary-foreground": "{palette.night.950}",
+      "secondary": "{palette.night.700}",
       "secondary-foreground": "{palette.vellum.100}",
-      "muted":                "{palette.night.800}",
-      "muted-foreground":     "{palette.vellum.400}",
-      "accent":               "{palette.or.800}",
-      "accent-foreground":    "{palette.or.300}",
-      "destructive":          "{palette.gules.300}",
+      "muted": "{palette.night.800}",
+      "muted-foreground": "{palette.vellum.400}",
+      "accent": "{palette.or.800}",
+      "accent-foreground": "{palette.or.300}",
+      "destructive": "{palette.gules.300}",
       "destructive-foreground": "{palette.night.950}",
-      "border":               "{palette.night.600}",
-      "input":                "{palette.vellum.400}",
-      "ring":                 "{palette.vert.300}",
-      "highlight":            "{palette.or.300}"
+      "border": "{palette.night.600}",
+      "input": "{palette.vellum.400}",
+      "ring": "{palette.vert.300}",
+      "highlight": "{palette.or.300}"
     }
   }
 }

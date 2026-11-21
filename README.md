@@ -10,11 +10,20 @@ In sculpture, the armature is the hidden frame under the clay. Every system buil
 | --- | --- | --- |
 | Engine | Role names (the contract), spacing, type scale, radius scale, motion durations, touch sizes, accessibility rules, the build and its contrast checks | `engine/` (MIT) |
 | Owner | Signatures (maker's marks), foundation overrides, package name | `brander/owner.json` here; `client/owner.json` in a client repo |
-| Family | Palette, fonts, radius choice, light and dark themes, Android dynamic color policy | `<owner>/families/<family>/family.json` |
+| Family | Industry, palette, fonts, radius choice, type scale adjustments, light and dark themes, Android dynamic color policy | `<owner>/families/<family>/family.json` |
 | App | Primary color, icon motif, small overrides | `<owner>/apps/<app>.json` |
 
 - **Brander** is the owner for Guilherme's own products. It lives in this repo with two families: Scriptorium (information science: Notekeeper, Herald, Tessera) and Health.
 - **Clients** are owners too, but each one lives in its own private repo created from [armature-client-template](https://github.com/guilnunes/armature-client-template). That repo carries a pinned copy of the engine, so a client system builds on its own and can be handed over without any dependency on this repo. Brander signatures never go into a client repo.
+
+## Industries
+
+`engine/industries.json` lists industries (health, finance, education, children, sports-fitness, information-science, commerce, arts-culture, public-service), each with:
+
+- **Rules** the build enforces: minimum text contrast, minimum UI contrast, smallest text size, smallest touch target, allowed Android dynamic color policies.
+- **Guidelines** that cannot be machine checked (for example "clinical values always carry their unit"), written to `<owner>/docs/industry-rules.md` and into `dist/tokens` for agents and reviewers.
+
+A family declares one or more industries in `settings.industry` (for example `["health"]`). The strictest value across the engine, the owner and every declared industry wins, so declaring an industry can only raise the bar. Health asks for AAA text contrast (7:1) and 16px minimum text, so the Health family raises its caption size and darkens two colors to comply. A family may adjust its type scale, spacing or sizes in a `foundation` block, never the accessibility rules.
 
 ## Build
 

@@ -1,4 +1,4 @@
-// Brander :: scriptorium (Scriptorium family). Built with Armature engine 1.0.0. Generated, do not edit.
+// Brander :: scriptorium (Scriptorium family). Built with Armature engine 1.1.0. Generated, do not edit.
 package digital.brander.theme.scriptorium
 
 import android.os.Build

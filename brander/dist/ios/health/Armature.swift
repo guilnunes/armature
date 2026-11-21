@@ -1,4 +1,4 @@
-// Brander :: health (Health family). Built with Armature engine 1.0.0. Generated, do not edit.
+// Brander :: health (Health family). Built with Armature engine 1.1.0. Generated, do not edit.
 import SwiftUI
 
 extension Color {
@@ -16,20 +16,20 @@ public enum Armature {
     public static let cardForeground = Color(light: (0.0706, 0.1020, 0.1176), dark: (0.9333, 0.9529, 0.9608))
     public static let popover = Color(light: (1.0000, 1.0000, 1.0000), dark: (0.1216, 0.1647, 0.1882))
     public static let popoverForeground = Color(light: (0.0706, 0.1020, 0.1176), dark: (0.9333, 0.9529, 0.9608))
-    public static let primary = Color(light: (0.0588, 0.3922, 0.3765), dark: (0.4980, 0.8275, 0.8000))
+    public static let primary = Color(light: (0.0471, 0.3412, 0.3255), dark: (0.4980, 0.8275, 0.8000))
     public static let primaryForeground = Color(light: (1.0000, 1.0000, 1.0000), dark: (0.0431, 0.0667, 0.0784))
     public static let secondary = Color(light: (0.9333, 0.9529, 0.9608), dark: (0.1216, 0.1647, 0.1882))
     public static let secondaryForeground = Color(light: (0.1216, 0.1647, 0.1882), dark: (0.9333, 0.9529, 0.9608))
     public static let muted = Color(light: (0.9333, 0.9529, 0.9608), dark: (0.0706, 0.1020, 0.1176))
-    public static let mutedForeground = Color(light: (0.2745, 0.3373, 0.3686), dark: (0.8667, 0.9020, 0.9176))
+    public static let mutedForeground = Color(light: (0.2431, 0.2980, 0.3255), dark: (0.8667, 0.9020, 0.9176))
     public static let accent = Color(light: (0.8275, 0.9412, 0.9333), dark: (0.1216, 0.1647, 0.1882))
     public static let accentForeground = Color(light: (0.0706, 0.1020, 0.1176), dark: (0.4980, 0.8275, 0.8000))
     public static let destructive = Color(light: (0.6314, 0.1882, 0.1176), dark: (0.9569, 0.6392, 0.5804))
     public static let destructiveForeground = Color(light: (1.0000, 1.0000, 1.0000), dark: (0.0431, 0.0667, 0.0784))
     public static let border = Color(light: (0.8667, 0.9020, 0.9176), dark: (0.1216, 0.1647, 0.1882))
     public static let input = Color(light: (0.3608, 0.4314, 0.4667), dark: (0.3608, 0.4314, 0.4667))
-    public static let ring = Color(light: (0.0588, 0.3922, 0.3765), dark: (0.4980, 0.8275, 0.8000))
-    public static let highlight = Color(light: (0.0588, 0.3922, 0.3765), dark: (0.4980, 0.8275, 0.8000))
+    public static let ring = Color(light: (0.0471, 0.3412, 0.3255), dark: (0.4980, 0.8275, 0.8000))
+    public static let highlight = Color(light: (0.0471, 0.3412, 0.3255), dark: (0.4980, 0.8275, 0.8000))
 
     public enum Space {
         public static let s0: CGFloat = 0
@@ -50,8 +50,8 @@ public enum Armature {
     public static let radiusContainer: CGFloat = 20
     /// Base point sizes. Use with .font(.custom(name, size:, relativeTo:)) so Dynamic Type scales them.
     public enum TypeScale {
-        public static let caption: CGFloat = 14
-        public static let label: CGFloat = 16
+        public static let caption: CGFloat = 16
+        public static let label: CGFloat = 17
         public static let body: CGFloat = 18
         public static let bodyLg: CGFloat = 20
         public static let titleSm: CGFloat = 22

@@ -1,4 +1,4 @@
-/* Brander :: health (Health family). Built with Armature engine 1.0.0. Generated, do not edit. */
+/* Brander :: health (Health family). Built with Armature engine 1.1.0. Generated, do not edit. */
 /* Usage: @import "tailwindcss"; @import "./health.css";  Works with shadcn/ui as is. */
 
 :root {
@@ -8,20 +8,20 @@
   --card-foreground: #121A1E;
   --popover: #FFFFFF;
   --popover-foreground: #121A1E;
-  --primary: #0F6460;
+  --primary: #0C5753;
   --primary-foreground: #FFFFFF;
   --secondary: #EEF3F5;
   --secondary-foreground: #1F2A30;
   --muted: #EEF3F5;
-  --muted-foreground: #46565E;
+  --muted-foreground: #3E4C53;
   --accent: #D3F0EE;
   --accent-foreground: #121A1E;
   --destructive: #A1301E;
   --destructive-foreground: #FFFFFF;
   --border: #DDE6EA;
   --input: #5C6E77;
-  --ring: #0F6460;
-  --highlight: #0F6460;
+  --ring: #0C5753;
+  --highlight: #0C5753;
   --radius: 12px;
   --radius-container: 20px;
   --focus-width: 3px;
@@ -85,8 +85,8 @@
   --font-serif: var(--family-reading);
   --font-display: var(--family-display);
   --font-mono: var(--family-mono);
-  --text-caption: 14px;
-  --text-label: 16px;
+  --text-caption: 16px;
+  --text-label: 17px;
   --text-body: 18px;
   --text-body-lg: 20px;
   --text-title-sm: 22px;

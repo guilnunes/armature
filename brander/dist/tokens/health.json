@@ -1,10 +1,13 @@
 {
-  "engine": "1.0.0",
+  "engine": "1.1.0",
   "owner": "Brander",
   "target": "health",
   "family": "Health",
   "settings": {
     "name": "Health",
+    "industry": [
+      "health"
+    ],
     "dynamic-color": "opt-in",
     "dynamic-color-reason": "Clinical apps benefit from feeling native; users may switch to wallpaper colors in settings, but status colors (vitals, alerts) are never replaced.",
     "radius-component": "lg",
@@ -31,6 +34,40 @@
         "license": "OFL"
       }
     }
+  },
+  "industries": [
+    {
+      "id": "health",
+      "name": "Health and care",
+      "rules": {
+        "contrast-text-min": 7,
+        "contrast-ui-min": 3,
+        "font-size-min": "16px",
+        "touch-min": "48px",
+        "dynamic-color": [
+          "never",
+          "opt-in"
+        ]
+      },
+      "guidelines": [
+        "Aim for WCAG 2.2 AAA wherever it is achievable, not only for contrast.",
+        "Status (normal, attention, critical) is always shown with an icon and words, never color alone, and status colors are never replaced by wallpaper colors.",
+        "Clinical values always carry their unit and reference range.",
+        "Destructive and irreversible actions (deleting records, sending prescriptions) require explicit confirmation that names what will happen.",
+        "Plan for offline and poor connectivity: show sync state and never lose input.",
+        "Plain language at about an 8th grade reading level for patient facing text."
+      ]
+    }
+  ],
+  "rules": {
+    "contrast-text-min": 7,
+    "contrast-ui-min": 3,
+    "font-size-min": 16,
+    "touch-min": 48,
+    "dynamic-color": [
+      "never",
+      "opt-in"
+    ]
   },
   "signatures": {
     "focus": {
@@ -59,20 +96,20 @@
       "card-foreground": "#121A1E",
       "popover": "#FFFFFF",
       "popover-foreground": "#121A1E",
-      "primary": "#0F6460",
+      "primary": "#0C5753",
       "primary-foreground": "#FFFFFF",
       "secondary": "#EEF3F5",
       "secondary-foreground": "#1F2A30",
       "muted": "#EEF3F5",
-      "muted-foreground": "#46565E",
+      "muted-foreground": "#3E4C53",
       "accent": "#D3F0EE",
       "accent-foreground": "#121A1E",
       "destructive": "#A1301E",
       "destructive-foreground": "#FFFFFF",
       "border": "#DDE6EA",
       "input": "#5C6E77",
-      "ring": "#0F6460",
-      "highlight": "#0F6460"
+      "ring": "#0C5753",
+      "highlight": "#0C5753"
     },
     "dark": {
       "background": "#0B1114",
@@ -98,7 +135,7 @@
     }
   },
   "foundation": {
-    "$description": "Armature engine foundation: scales and accessibility rules every owner inherits. An owner may override scale values in owner.json 'foundation'; the a11y block can be made stricter, never looser.",
+    "$description": "Health industry rule: no text below 16px.",
     "space": {
       "0": {
         "$value": "0px"
@@ -172,11 +209,11 @@
       "$type": "dimension",
       "$description": "Major third scale (1.25) anchored on an 18px body. Larger than common defaults on purpose: low vision first.",
       "caption": {
-        "$value": "14px",
+        "$value": "16px",
         "$description": "Smallest allowed text. Nothing below this, ever."
       },
       "label": {
-        "$value": "16px"
+        "$value": "17px"
       },
       "body": {
         "$value": "18px"

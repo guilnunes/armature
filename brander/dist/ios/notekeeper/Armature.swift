@@ -1,4 +1,4 @@
-// Brander :: notekeeper (Scriptorium family). Built with Armature engine 1.0.0. Generated, do not edit.
+// Brander :: notekeeper (Scriptorium family). Built with Armature engine 1.1.0. Generated, do not edit.
 import SwiftUI
 
 extension Color {

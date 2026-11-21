@@ -1,4 +1,4 @@
-// Brander :: health (Health family). Built with Armature engine 1.0.0. Generated, do not edit.
+// Brander :: health (Health family). Built with Armature engine 1.1.0. Generated, do not edit.
 package digital.brander.theme.health
 
 import android.os.Build
@@ -47,20 +47,20 @@ val ArmatureLightExtra = ArmatureExtraColors(
     cardForeground = Color(0xFF121A1E),
     popover = Color(0xFFFFFFFF),
     popoverForeground = Color(0xFF121A1E),
-    primary = Color(0xFF0F6460),
+    primary = Color(0xFF0C5753),
     primaryForeground = Color(0xFFFFFFFF),
     secondary = Color(0xFFEEF3F5),
     secondaryForeground = Color(0xFF1F2A30),
     muted = Color(0xFFEEF3F5),
-    mutedForeground = Color(0xFF46565E),
+    mutedForeground = Color(0xFF3E4C53),
     accent = Color(0xFFD3F0EE),
     accentForeground = Color(0xFF121A1E),
     destructive = Color(0xFFA1301E),
     destructiveForeground = Color(0xFFFFFFFF),
     border = Color(0xFFDDE6EA),
     input = Color(0xFF5C6E77),
-    ring = Color(0xFF0F6460),
-    highlight = Color(0xFF0F6460),
+    ring = Color(0xFF0C5753),
+    highlight = Color(0xFF0C5753),
 )
 val ArmatureDarkExtra = ArmatureExtraColors(
     background = Color(0xFF0B1114),
@@ -91,20 +91,20 @@ val ArmatureLightScheme = lightColorScheme(
     surfaceContainerLow = Color(0xFFFFFFFF),
     onSurface = Color(0xFF121A1E),
     surfaceContainerHigh = Color(0xFFFFFFFF),
-    primary = Color(0xFF0F6460),
+    primary = Color(0xFF0C5753),
     onPrimary = Color(0xFFFFFFFF),
     secondaryContainer = Color(0xFFEEF3F5),
     onSecondaryContainer = Color(0xFF1F2A30),
     surfaceVariant = Color(0xFFEEF3F5),
-    onSurfaceVariant = Color(0xFF46565E),
+    onSurfaceVariant = Color(0xFF3E4C53),
     tertiaryContainer = Color(0xFFD3F0EE),
     onTertiaryContainer = Color(0xFF121A1E),
     error = Color(0xFFA1301E),
     onError = Color(0xFFFFFFFF),
     outlineVariant = Color(0xFFDDE6EA),
     outline = Color(0xFF5C6E77),
-    secondary = Color(0xFF0F6460),
-    tertiary = Color(0xFF0F6460),
+    secondary = Color(0xFF0C5753),
+    tertiary = Color(0xFF0C5753),
     surface = Color(0xFFF7FAFB),
     surfaceBright = Color(0xFFFFFFFF),
     surfaceDim = Color(0xFFEEF3F5),
@@ -174,8 +174,8 @@ object ArmatureDimens {
 
 /** Sizes in sp so they follow the user's system font scale. Font families are wired in the app module (res/font). */
 object ArmatureTypeScale {
-    val caption = 14.sp
-    val label = 16.sp
+    val caption = 16.sp
+    val label = 17.sp
     val body = 18.sp
     val bodyLg = 20.sp
     val titleSm = 22.sp
