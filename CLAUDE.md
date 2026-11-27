@@ -13,4 +13,4 @@ Armature is a design token engine (`engine/`) plus Brander's own owner layer (`b
 
 ## Status page
 
-At the end of every working session, update the project's Notion page in the Projects database, "Armature: Brander design foundation" (https://www.notion.so/41ffa617db4f8161950eec4be7157791): add a dated line to the Status log, and set Status, Last surface, Last worked, Next step and Blocker.
+At the end of every working session, update the project's Notion page in the Projects database, "Armature" (https://www.notion.so/41ffa617db4f8161950eec4be7157791): add a dated line to the Status log, and set Status, Last surface, Last worked, Next step and Blocker.

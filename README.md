@@ -1,6 +1,6 @@
 # Armature
 
-A design token engine with built-in accessibility checks, and the home of Brander's own product families.
+A design token engine with built-in accessibility checks, and the home of Brander's own design families.
 
 In sculpture, the armature is the hidden frame under the clay. Every system built on it shapes its own surface; the armature keeps them standing the same way.
 
@@ -13,7 +13,9 @@ In sculpture, the armature is the hidden frame under the clay. Every system buil
 | Family | Industry, palette, fonts, radius choice, type scale adjustments, light and dark themes, Android dynamic color policy | `<owner>/families/<family>/family.json` |
 | App | Primary color, icon motif, small overrides | `<owner>/apps/<app>.json` |
 
-- **Brander** is the owner for Guilherme's own products. It lives in this repo with two families: Scriptorium (information science: Notekeeper, Herald, Tessera) and Health.
+- **Brander** is the owner layer for Guilherme's own projects (the company Brander in Governor). It lives in this repo with two families, which Governor registers as brands of Brander: Scriptorium (information science: Notekeeper, Herald, Tessera) and Health.
+
+Name mapping with Governor: Armature owner = Governor party; Armature family = Governor family or brand; Armature app = Governor project.
 - **Clients** are owners too, but each one lives in its own private repo created from [armature-client-template](https://github.com/guilnunes/armature-client-template). That repo carries a pinned copy of the engine, so a client system builds on its own and can be handed over without any dependency on this repo. Brander signatures never go into a client repo.
 
 ## Industries
